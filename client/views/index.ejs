@@ -2,26 +2,39 @@
     <head>
         <meta charset="utf-8">
         <link href="/css/style.css" rel="stylesheet" />
-        <title>Top Page</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js" integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="/js/graph.js"></script>
+        <title>TORYO Web Sites at Home</title>
+        <!-- https://cdnjs.com/libraries/Chart.js -->
     </head>
     <body>
         <div id="content">
-            <div id="header">
+            <section id="header">
                 <h1>
-                    Top Page
+                    TORYO Web Sites ~ Visible Only in Home ~
                 </h1>
-            </div>
-            <div id="body">
                 <p>
-                    <a href="/sensor">Sensor Information</a>
-                    <a href="/#">Accounting</a>
+                    This website publishes only in my home. So, you cannot visible outside.
                 </p>
-            </div>
-            <div id="footer">
+            </section>
+            <section id="graph">
+                <h2>
+                    Visualizing Sensor Data
+                </h2>
+                <canvas id="temperature"></canvas>
+                <!-- <canvas id="humid"></canvas> -->
+            </section>
+            <section id="accounting">
+                <h2>
+                    Visualizing Accounting Data
+                </h2>
+                <canvas id="acccounting"></canvas>
+            </section>
+            <section id="footer">
                 <small>
                     &copy; R.Sato 2022
                 </small>
-            </div>
+            </section>
         </div>
     </body>
 </html>
