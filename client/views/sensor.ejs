@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="/css/style.css" rel="stylesheet">
+        <title>Sensor Information</title>
+    </head>
+    <body>
+        <div id="content">
+            <div id="header">
+                <h1>
+                    Sensor Information Visibility Site Using Raspberry Pi
+                </h1>
+            </div>
+            <div id="body">
+                <canvas id="temperature"></canvas>
+                <canvas id="humid"></canvas>
+            </div>
+            <div id="footer">
+                <small>
+                    &copy; R.Sato 2022
+                </small>
+            </div>
+        </div>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // const ctx = document.getElementById("temperature").getContext("2d");
+        const ctx = new Chart(document.getElementById("temperature"), config);
+        const config = {
+            type: 'line',
+            data: data,
+            options: {}
+        };
+        const labels = [
+            'January',
+            'February',
+            'March',
+            'April',
+            'May',
+            'June',
+            ];
+            const data = {
+            labels: labels,
+            datasets: [{
+                label: 'My First dataset',
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: [0, 10, 5, 2, 20, 30, 45],
+            }]
+        };
+    </script>
+
+</html>

@@ -1,0 +1,13 @@
+body{
+    /* padding: 0; */
+    background-color: #E6F4FF;
+}
+
+#content{
+    margin: 0vw 10vh;
+    background-color: #fff;
+}
+
+#header{
+    text-align: center;
+}
