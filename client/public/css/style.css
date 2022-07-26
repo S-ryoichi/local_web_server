@@ -1,30 +1,80 @@
 body{
-    /* padding: 0; */
+    padding: 0;
     background-color: #fff;
 }
 
-#header{
+.header{
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+}
+
+.header ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.header li{
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+}
+
+.header p{
+    font-size: 1.5rem;
+    padding: 0.25rem 1rem;
+}
+
+.top{
     background-image: url("/images/header.jpg");
     background-repeat: no-repeat;
     background-position: right top;
-    background-size: 70vw auto;
+    background-size: 60vw auto;
+    background-color: #fff;
     padding: 5.5rem 1rem 3rem;
-    background-color: #E6F4FF;
 }
-
-#header div{
+.top div{
     display: flex;    
     flex-direction: column;
     align-items: flex-start;
     align-content: stretch;
 }
-#header h1{
+.top h1{
     font-size: 1.5rem;
-    margin-bottom: 2rem;
+    margin: 0 0 2rem;
     background: rgba(255, 255, 255, .5);
 }
-#header p{
+.top p{
     font-size: 1rem;
     margin-bottom: 2rem;
     background: rgba(255, 255, 255, .5);
+}
+
+@media (min-width: 600px) {
+    .header {
+        height: 3rem;
+        padding: 0 1rem;
+    }
+    .header p{
+        font-size: 1rem;
+        padding: 0.1rem 1rem;
+    }
+    .header li{
+        font-size: 0.75rem;
+        padding: 0.1rem 1rem;
+    }
+    .top {
+        padding: 16vw 1rem;
+    }
+    .top h1{
+        font-size: 2rem;
+        margin: 0 0 2rem;
+        background: none;
+        padding: 0;
+    }
+    .top p{
+        width: 38vw;
+        background: none;
+    }
 }
