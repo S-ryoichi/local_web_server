@@ -1,11 +1,12 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link href="/css/style.css" rel="stylesheet" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js" integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link href="./css/style.css" rel="stylesheet" />
         <title>TORYO Web Sites at Home</title>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" integrity="sha512-CryKbMe7sjSCDPl18jtJI5DR5jtkUWxPXWaLCst6QjH8wxDexfRJic2WRmRXmstr2Y8SxDDWuBO6CQC6IE4KTA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/ja.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/ja.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment@1.0.0"></script>
     </head>
     <body>
         <div class="content">
@@ -47,14 +48,30 @@
                         <canvas id="temperature"></canvas>
                         <!-- <canvas class="humid"></canvas> -->
                     </div>
-                    <script src="/js/graph.js"></script>
+                    <script type="text/javascript">
+                    </script>
+                    <script src="/js/graph_temp.js">
+                    </script>
                 </div>
             </section>
             <section class="accounting" id="accounting">
-                <h2>
-                    Visualizing Accounting Data
-                </h2>
-                <canvas class="acccounting"></canvas>
+                <div class="wrapper context">
+                    <div class="text-area">
+                        <h2>
+                            Visualizing Accounting Data
+                        </h2>
+                        <p>
+                            If you click the "Display" button, you can see your income data this year.
+                            And another button, the "Register" button, registers the new income data.
+                        </p>
+                        <button id="display_income">Display</button>
+                        <button onclick="location.href='/inputform'">Register</button>
+                    </div>
+                    <div class="chart-area">
+                        <canvas class="acccounting"></canvas>
+                    </div>
+                    <!-- <script src="/js/graph_income.js"></script> -->
+                </div>
             </section>
             <section class="footer">
                 <small>
