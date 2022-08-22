@@ -9,6 +9,9 @@ const jsonParser = bodyParser.json();
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/public'));
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 app.route("/")
     .get((req, res) => {
         const tempData = connectCSV.readTempData();
@@ -20,7 +23,7 @@ app.route("/fetch")
         const tempData = connectCSV.readTempData();
         console.log(tempData);
         res.json(tempData);
-    })
+    });
 
 app.route("/inputform")
     .get((req, res) => {
@@ -35,9 +38,8 @@ app.route("/temp")
         res.redirect("/");
     })
     .post((req, res) => {
-        const recvData = req.body;
-        console.log(req.body);
-        connectCSV.writeTempData(req.body);
+        connectCSV.writeTempData({ timestamp: req.body.timestamp, temp: req.body.temp });
+        res.json({"response": "OK"});
     });
 
 const server = app.listen(3000, function() {
