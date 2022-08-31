@@ -69,8 +69,8 @@ async function createChart(jsonData){
                             "day": "MM/DD"
                         }
                     },
-                    // min: '00:00',
-                    // max: '23:59',
+                    // min: '2022/08/29',
+                    // max: '2022/09/01',
                 },
                 y: {
                     display: true,

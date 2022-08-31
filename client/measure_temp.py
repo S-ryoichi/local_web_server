@@ -40,7 +40,7 @@ def main():
     httpComm = HTTP(" http://127.0.0.1:3000/temp", ["timestamp", "temp"])
     # Temp = Temperature()
     # temp = Temp.get_temp()
-    temp = 30
+    temp = 15
     timestamp = int(time.time() * 1000)
     httpComm.post([str(timestamp), str(temp)])
 
